@@ -1,6 +1,5 @@
 env
-
 .idea
 .idea/**/*
-
 out/
+src/day*/*.txt
