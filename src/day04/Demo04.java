@@ -24,7 +24,7 @@ class Benz {
 
     //静态方法,只能访问静态成员
     public static void outBrand() {
-        //System.out.println(this.tires);
+//        System.out.println(this.tires);
     }
 
     public Benz() {
