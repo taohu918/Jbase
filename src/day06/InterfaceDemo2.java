@@ -31,18 +31,18 @@ interface USB {
 class Mp3 implements USB {
     //实现方法
     public void play() {
-        System.out.println("啦啦啦啦,,,,");
+        System.out.println("I'm mp3");
     }
 }
 
 class Fan implements USB {
     public void play() {
-        System.out.println("好凉快呀!!");
+        System.out.println("I'm USB");
     }
 }
 
 class Camera implements USB {
     public void play() {
-        System.out.println("咔擦！！！");
+        System.out.println("I'm Camera");
     }
 }

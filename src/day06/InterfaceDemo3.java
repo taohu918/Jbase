@@ -7,7 +7,7 @@ public class InterfaceDemo3 {
         // t.chun();
         // t.eat();
 
-        AnimalLover a = new AnimalLover();
+        DogLover a = new DogLover();
         a.feed(t);
 
         Eater e = new Eater();
@@ -16,13 +16,13 @@ public class InterfaceDemo3 {
 }
 
 interface Pet {
-    public void chun();
+    public void cute();
 }
 
-class AnimalLover {
+class DogLover {
     public void feed(Pet p) {
         System.out.println("爱狗人士");
-        p.chun();
+        p.cute();
     }
 }
 
@@ -49,8 +49,8 @@ class Dog extends Animal {
 }
 
 class TaiDi extends Dog implements Pet, Eatable {
-    public void chun() {
-        System.out.println("蠢狗");
+    public void cute() {
+        System.out.println("蠢萌");
     }
 
     public void eat() {

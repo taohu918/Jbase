@@ -3,17 +3,17 @@ package day06;
 class PolyDemo1 {
     public static void main(String[] args) {
         //
-        DogP1 d1 = new DogP1();
+        DogPoly1 d1 = new DogPoly1();
         d1.watch();
 
-        AnimalP1 a1 = d1;
+        AnimalPoly1 a1 = d1;
         a1.cry();
 
 //        Eatable e1 = d1;
 //        e1.eat();
 
-        AnimalP1 a2 = new DogP1();
-        DogP1 d2 = (DogP1) a2;
+        AnimalPoly1 a2 = new DogPoly1();
+        DogPoly1 d2 = (DogPoly1) a2;
 
         //Cat c1 = (Cat)a2;
 
@@ -25,18 +25,18 @@ class PolyDemo1 {
     }
 }
 
-class AnimalP1 {
+class AnimalPoly1 {
     void cry() {
     }
 }
 
-interface EatableP1 {
+interface EatablePoly1 {
     public void eat();
 }
 
-class DogP1 extends AnimalP1 implements EatableP1 {
+class DogPoly1 extends AnimalPoly1 implements EatablePoly1 {
     public void cry() {
-        System.out.println("wwww");
+        System.out.println("犬吠");
     }
 
     public void watch() {
@@ -48,5 +48,5 @@ class DogP1 extends AnimalP1 implements EatableP1 {
     }
 }
 
-class Cat extends AnimalP1 {
+class Cat extends AnimalPoly1 {
 }
