@@ -1,6 +1,5 @@
-/**
- * ���̿���
- */
+package day02;
+
 class FlowControl {
     public static void main(String[] args) {
         //1.if

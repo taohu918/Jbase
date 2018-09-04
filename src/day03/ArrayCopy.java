@@ -8,7 +8,7 @@ public class ArrayCopy {
         rewind(arr_short);
     }
 
-    public static void intercept(int[] arr1) {
+    private static void intercept(int[] arr1) {
         int[] arr2 = new int[5];
         for (int i = 0; i < arr2.length; i++) {
             arr2[i] = arr1[i];
@@ -19,7 +19,7 @@ public class ArrayCopy {
         System.out.println();
     }
 
-    public static void rewind(int[] arr1) {
+    private static void rewind(int[] arr1) {
         int[] arr2 = new int[5];
         for (int i = 0; i < arr2.length; i++) {
             if (i <= arr1.length - 1) {

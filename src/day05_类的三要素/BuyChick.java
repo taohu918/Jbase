@@ -1,4 +1,4 @@
-package day05;
+package day05_类的三要素;
 
 /**
  * 百钱买百鸡

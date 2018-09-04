@@ -1,4 +1,4 @@
-package day05;
+package day05_类的三要素;
 
 class ClassDemo2 {
     public static void main(String[] args) {
@@ -12,10 +12,10 @@ class ClassDemo2 {
 
 class Father {
     String name;
-    private int asset;    //
+    private int asset;
 
     private void eat() {
-        System.out.println("洗手!");
+        System.out.println("吃饭");
     }
 
     public int getAsset() {
@@ -34,14 +34,13 @@ class Father {
 class Son extends Father {
     public void eat() {
 //		super.eat();
-        System.out.println("洗澡!");
+        System.out.println("洗手!");
     }
 
     public void run() {
         super.walk();
     }
 
-    //
     public void walk() {
     }
 }

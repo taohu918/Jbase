@@ -1,5 +1,7 @@
+package day02;
+
 /**
- * 这是我的类，演示版。
+ * demo
  */
 class CommentDemo{
 

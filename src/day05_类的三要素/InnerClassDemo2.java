@@ -1,13 +1,13 @@
-package day05;
+package day05_类的三要素;
 
 class InnerClassDemo2{
 	public static void main(String[] args){
-		Benz2 b = new Benz2();
+		Audi b = new Audi();
 		b.run();
 	}
 }
 
-class Benz2{
+class Audi{
 	String color ;
 	int tires ;
 
