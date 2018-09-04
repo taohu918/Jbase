@@ -1,4 +1,4 @@
-package day05_类的三要素;
+package day05_class;
 
 class ClassDemo1 {
     public static void main(String[] args) {

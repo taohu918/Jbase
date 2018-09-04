@@ -3,14 +3,21 @@ package day06;
 public class InterfaceDemo1 {
     public static void main(String[] args) {
         WomenStar ws = new WomenStar();
-        ws.white();
-        ws.rich();
+        ws.self();
 
         TuHao tuhao = new TuHao();
         tuhao.marry(ws);
+    }
+}
 
-        // KoreanMan m1 = new KoreanMan();
-        // tuhao.marry(m1);
+/*
+ * 土豪赢取白富美
+ * */
+class TuHao {
+    public void marry(WomenStar wrb) {
+        wrb.white();
+        wrb.rich();
+        wrb.beauty();
     }
 }
 
@@ -29,6 +36,9 @@ interface Beauty {
 interface WRB extends White, Rich, Beauty {
 }
 
+/*
+ * 符合白富美条件, 即实现了 WRB 接口的女明星
+ * */
 class WomenStar implements WRB {
     public void white() {
         System.out.println("很白");
@@ -41,22 +51,9 @@ class WomenStar implements WRB {
     public void beauty() {
         System.out.println("漂亮");
     }
-}
 
-class KoreanMan implements White, Rich {
-    public void white() {
-        System.out.println("白面小生");
-    }
-
-    public void rich() {
+    public void self() {
+        System.out.println("我是白富美");
     }
 }
 
-class TuHao {
-    //white是接口
-    public void marry(WomenStar wrb) {
-        wrb.white();
-        wrb.rich();
-        wrb.beauty();
-    }
-}

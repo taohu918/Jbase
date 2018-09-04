@@ -4,20 +4,15 @@ public class InterfaceDemo3 {
     public static void main(String[] args) {
         TaiDi t = new TaiDi();
         t.cry();
-        // t.chun();
-        // t.eat();
 
         DogLover a = new DogLover();
         a.feed(t);
 
-        Eater e = new Eater();
-        e.eating(t);
+        Businessman b = new Businessman();
+        b.sell(t);
     }
 }
 
-interface Pet {
-    public void cute();
-}
 
 class DogLover {
     public void feed(Pet p) {
@@ -26,16 +21,21 @@ class DogLover {
     }
 }
 
-interface Eatable {
-    public void eat();
+interface Pet {
+    public void cute();
 }
 
-class Eater {
-    public void eating(Eatable e) {
-        System.out.println("吃狗肉的");
-        e.eat();
+class Businessman {
+    public void sell(Valuable v) {
+        System.out.println("卖狗的");
+        v.price();
     }
 }
+
+interface Valuable {
+    public void price();
+}
+
 
 abstract class Animal {
     abstract String cry();
@@ -48,12 +48,12 @@ class Dog extends Animal {
     }
 }
 
-class TaiDi extends Dog implements Pet, Eatable {
+class TaiDi extends Dog implements Pet, Valuable {
     public void cute() {
         System.out.println("蠢萌");
     }
 
-    public void eat() {
-        System.out.println("好吃");
+    public void price() {
+        System.out.println("500RMB");
     }
 }

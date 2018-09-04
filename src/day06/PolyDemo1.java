@@ -4,16 +4,19 @@ class PolyDemo1 {
     public static void main(String[] args) {
         //
         DogPoly1 d1 = new DogPoly1();
-        d1.watch();
+        d1.bark();
 
         AnimalPoly1 a1 = d1;
-        a1.cry();
+        a1.cute();
 
-//        Eatable e1 = d1;
-//        e1.eat();
+        // System.out.println("\n-----------");
+        // WatchDog w1 = d1;
+        // ((DogPoly1) w1).cute();
 
+        System.out.println("\n-----------");
         AnimalPoly1 a2 = new DogPoly1();
         DogPoly1 d2 = (DogPoly1) a2;
+        d2.cute();
 
         //Cat c1 = (Cat)a2;
 
@@ -26,26 +29,23 @@ class PolyDemo1 {
 }
 
 class AnimalPoly1 {
-    void cry() {
+    void cute() {
     }
 }
 
-interface EatablePoly1 {
-    public void eat();
+interface WatchDog {
+    public void bark();
 }
 
-class DogPoly1 extends AnimalPoly1 implements EatablePoly1 {
-    public void cry() {
-        System.out.println("犬吠");
+class DogPoly1 extends AnimalPoly1 implements WatchDog {
+    public void bark() {
+        System.out.println("看家");
     }
 
-    public void watch() {
-        System.out.println("看家!");
+    public void cute() {
+        System.out.println("卖萌");
     }
 
-    public void eat() {
-        System.out.println("eat...");
-    }
 }
 
 class Cat extends AnimalPoly1 {
