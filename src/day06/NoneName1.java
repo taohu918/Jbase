@@ -14,7 +14,7 @@ class NoneName1 {
 }
 
 class RichMan {
-    public void findLover(W w) {
+    void findLover(W w) {
         w.white();
     }
 }
