@@ -10,6 +10,7 @@ class AdapterDemo {
         });
         b.click();
         b.dbClick();
+        System.out.println("==================");
 
         Button c = new Button();
         c.setListener(new MouseAdapter() {

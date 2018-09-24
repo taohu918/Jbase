@@ -1,4 +1,4 @@
-package come.homework.pci;
+package com.homework.pci;
 
 public class homework_PCI {
     public static void main(String args[]) {
