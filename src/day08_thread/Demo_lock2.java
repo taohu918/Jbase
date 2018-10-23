@@ -3,20 +3,20 @@ package com.thread.lock2;
 class DemoLock2 {
     public static void main(String[] args) {
         Object lock = new Object();
-        Seler s1 = new Seler("S1", lock);
-        Seler s2 = new Seler("S2", lock);
+        Seller s1 = new Seller("S1", lock);
+        Seller s2 = new Seller("S2", lock);
         s1.start();
         s2.start();
     }
 }
 
 //售票员
-class Seler extends Thread {
-    private static int tickets = 100;
+class Seller extends Thread {
+    private static int tickets = 10;
     private final Object lock;  // 锁旗标
     private String name;
 
-    Seler(String name, Object lock) {
+    Seller(String name, Object lock) {
         this.name = name;
         this.lock = lock;
     }
@@ -37,7 +37,7 @@ class Seler extends Thread {
         synchronized (lock) {
             int t = tickets;
             try {
-                //Thread.sleep(50);
+                Thread.sleep(100);
             } catch (Exception ignore) {
                 System.out.println();
             }
