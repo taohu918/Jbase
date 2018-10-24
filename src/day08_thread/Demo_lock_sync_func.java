@@ -1,6 +1,6 @@
-package com.thread.lock.sync.func1;
+package com.thread.lock.sync.func;
 
-class DemoLockSyncFunc1 {
+class DemoLockSyncFunc {
     public static void main(String args[]) {
         TicketPool pool = new TicketPool();
         Seller s1 = new Seller("S-1", pool);
